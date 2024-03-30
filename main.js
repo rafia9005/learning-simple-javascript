@@ -48,3 +48,26 @@ for (let i = 0; i < 10; i++) {
   // let i = 0 artinya variable i nilai nya = 0. i < 10 artinya i akan di lakukan perulangan sampai 10 kali.
   console.log("helo world", i + 1);
 }
+
+// fungsi readline
+const readline = require("node:readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+}); // membuat readline interface
+
+rl.question(`sekolah mu di mana ?`, (name) => {
+  // lakukan pertanyaan
+  console.log(`jadi kamu sekolah di : ${name}`); // hasilkan pertanyaan
+  rl.close();
+});
+
+// prompt sendiri hanya bisa di gunakan di dalam web, tidak bisa untuk node js
+// const name = prompt("siapa nama mu ? ");
+// alert(`Jadi nama kamu ${name}`);
+
+const div = document.querySelector("div");
+// untuk memanggil <div></div> di html, dan bisa di ganti seperti h1 dll
+
+const randomNumber = Math.floor(Math.random() * 10); // akan di buatkan angka random 1 - 10
